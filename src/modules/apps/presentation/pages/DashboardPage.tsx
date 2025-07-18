@@ -6,6 +6,7 @@ const { Content } = Layout;
 
 export const DashboardPage = () => {
   const { state } = useApps();
+  console.log(state);
 
   if (state.loading) return <Spin size="large" />;
   if (state.error) return <Alert message={state.error} type="error" />;
