@@ -1,18 +1,19 @@
 import type { MockMethod } from "vite-plugin-mock";
 
-export const appMocks: MockMethod[] = [
+export default [
   {
     url: "/api/apps",
     method: "get",
+    timeout: 1000,
     response: () => ({
-      code: 200,
+      status: 200,
       data: [
         {
           id: "1",
           name: "SocialApp",
           category: "social",
           platform: "android",
-          url: "https://willapptest.com",
+          url: "https://socialapp.com",
           metrics: {
             downloads: 15000,
             rating: 4.5,
@@ -23,4 +24,4 @@ export const appMocks: MockMethod[] = [
       ],
     }),
   },
-];
+] as MockMethod[];
