@@ -9,6 +9,7 @@ export default defineConfig({
       mockPath: "src/mocks",
       enable: true,
       watchFiles: true,
+      logger: true,
     }),
   ],
 });
